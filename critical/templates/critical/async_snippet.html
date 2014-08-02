@@ -1,0 +1,19 @@
+<noscript>
+  {{ critical_css_fragment|safe }}
+</noscript>
+<script>
+  (function() {
+    function loadCSS(e,t,n){var i=window.document.createElement("link");var o=t||window.document.getElementsByTagName("script")[0];i.rel="stylesheet";i.href=e;i.media="only x";o.parentNode.insertBefore(i,o);setTimeout(function(){i.media=n||"all"})}
+    function injectCSS(e,t,n){var i=window.document.createElement("style");var o=t||window.document.getElementsByTagName("script")[0];i.textContent=e;o.parentNode.insertBefore(i,o);}
+    var elem = document.getElementById('django-critical-async-css-marker');
+    {% for entry in css_entries %}
+      {% if entry.href %}
+        loadCSS('{{ entry.href|safe }}', elem);
+      {% endif %}
+      {% if entry.text %}
+        injectCSS('{{ entry.text|escapejs }}', elem);
+      {% endif %}
+    {% endfor %}
+    elem.parentNode.removeChild(elem);
+  })();
+</script>

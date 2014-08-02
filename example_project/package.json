@@ -1,0 +1,7 @@
+{
+  "name": "example_project",
+  "version": "1.0.0",
+  "dependencies": {
+    "penthouse": "^0.2.5"
+  }
+}
