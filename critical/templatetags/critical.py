@@ -1,8 +1,9 @@
 from __future__ import unicode_literals
 from django import template
 
-from .. import (CRITICAL_MARK_BEGIN, CRITICAL_MARK_END, CRITICAL_ASYNC_MARK,
-                CRITICAL_KEY_MARK_BEGIN, CRITICAL_KEY_MARK_END)
+from ..marks import (CRITICAL_MARK_BEGIN, CRITICAL_MARK_END,
+                     CRITICAL_ASYNC_MARK, CRITICAL_KEY_MARK_BEGIN,
+                     CRITICAL_KEY_MARK_END)
 
 register = template.Library()
 

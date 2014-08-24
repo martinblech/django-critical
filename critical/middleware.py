@@ -8,8 +8,8 @@ from django.core.cache import cache
 from django.template import Context
 from django.template.loader import get_template
 
-from . import (CRITICAL_MARK_BEGIN, CRITICAL_MARK_END, CRITICAL_ASYNC_MARK,
-               CRITICAL_KEY_MARK_BEGIN, CRITICAL_KEY_MARK_END)
+from .marks import (CRITICAL_MARK_BEGIN, CRITICAL_MARK_END, CRITICAL_ASYNC_MARK,
+                    CRITICAL_KEY_MARK_BEGIN, CRITICAL_KEY_MARK_END)
 from .parser import extract_css_entries
 from .util import download_css
 from .core import get_critical_css

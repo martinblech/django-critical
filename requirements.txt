@@ -1,0 +1,4 @@
+django>=1.5.1
+wheel==0.23.0
+django-appconf>=0.4
+cssmin>=0.2.0
