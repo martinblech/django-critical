@@ -53,10 +53,20 @@ Quickstart
         CRITICAL_PENTHOUSE_PATH = os.path.join(
             BASE_DIR, 'node_modules/penthouse/penthouse.js')
 
+* If phantomjs is not in your PATH, you have to set ``CRITICAL_PHANTOMJS_PATH`` and point it to your phantomjs binary:
+
+    .. code-block:: python
+
+        CRITICAL_PHANTOMJS_PATH = os.path.join(
+            BASE_DIR, 'node_modules/phantomjs/bin/phantomjs')
+
+
 How it works
 ------------
 
-``django-critical`` parses the HTML between ``{% critical %}`` and
+``django-critical`` is activated by adding ``{% load critical %}`` to your template.
+
+``django-critical`` then parses the HTML between ``{% critical %}`` and
 ``{% endcritical %}`` and searches for CSS.
 
     .. code-block:: html
